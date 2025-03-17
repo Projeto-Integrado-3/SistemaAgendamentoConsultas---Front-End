@@ -1,78 +1,138 @@
-.login-container{
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: 1px solid#ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.login-container h2{
-    color: #007bff;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-#loginform{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; 
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    min-height: 100vh; 
 }
 
-#loginform input{
-    padding: 0.8rem;
-    border: 1px solid#ddd;
-    border-radius: 4px;
-    font-size: 1rem;
+
+main {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#loginform input:focus{
+.login {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    color: #4caf50;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form input:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25)
+    border-color: #4caf50;
 }
 
+.error {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+ 
+}
 
-/* Estilo do botão */
-
-#loginform button{
-    background-color: #007bff;
-    color: white;
-    padding: 0.8rem;
+.btn {
+    background-color: #4caf50;
+    color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;    
 }
 
-#loginform button:hover{
-    background-color: #0056b3;
+.btn:hover {
+    background-color: #45a049;
 }
 
-#loginform a{
-    color: #6c757d;
-    text-decoration: none;
-    text-align: right;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
-#loginform a:hover{
-    color: #007bff;
-    text-decoration: underline;
+.btn-2 {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;    
 }
 
-/* Responsividade */
+.btn-2:hover {
+    background-color: #d32f2f;
+}
 
-@media (max-eidth: 400px){
-    .login-container{
-        margin: 1rem;
-        padding: 1.5rem;
-    }
-    #loginform input, #loginform button{
-        padding: 0.7rem;
-    }
+.btn-2:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
     
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
 }
