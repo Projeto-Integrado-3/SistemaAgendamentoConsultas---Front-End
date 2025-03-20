@@ -17,10 +17,7 @@ function isEmailValid() {
     return validateEmail(email);
 }
 
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex para validar e-mails
-    return emailRegex.test(email);
-}
+
 
 function toggleEmailErrors() {
     const email = form.email().value;

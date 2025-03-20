@@ -40,7 +40,7 @@ main {
     text-align: center;
     font-weight: bold;
     font-size: 32px;
-    color: #4caf50;
+    color: blue;
 }
 
 .login-form .form-group {
@@ -64,7 +64,7 @@ main {
 
 .login-form input:focus {
     outline: none;
-    border-color: #4caf50;
+    border-color: black;
 }
 
 .error {
@@ -75,7 +75,7 @@ main {
 }
 
 .btn {
-    background-color: #4caf50;
+    background-color: blue;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -89,7 +89,7 @@ main {
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #00008b;
 }
 
 .btn:disabled {
