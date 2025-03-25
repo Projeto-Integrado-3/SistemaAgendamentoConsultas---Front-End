@@ -81,3 +81,5 @@ Este projeto está sob a licença [Nome da Licença] (Ex: MIT).
 * [Links úteis, se houver]
 * [Informações sobre a equipe]
 * [Outros detalhes relevantes]
+
+detalhes
