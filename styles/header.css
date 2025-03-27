@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo do header */
 header {
     background-color: #004D80;
     padding: 10px 0;
@@ -11,14 +13,16 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
 }
 
 header .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
     gap: 8px;
+    padding: 8px;
+   
 }
 
 header .container a {
@@ -28,7 +32,7 @@ header .container a {
     color: inherit;
 }
 
-header .container a img{
+header .container a img {
     width: 300px;
 }
 
@@ -41,4 +45,50 @@ header .title {
     color: #ffffff;
     font-size: 35px;
     font-weight: bold;
+}
+
+/* Estilo do nav */
+nav {
+    background-color: #004D80;
+    padding: 10px 0;
+    border-bottom: 1px solid #003d66;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botão de logout */
+#logout-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#logout-button:hover {
+    background-color: #ff6b6b;
 }

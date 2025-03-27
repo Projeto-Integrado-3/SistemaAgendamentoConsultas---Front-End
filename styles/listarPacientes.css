@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+}
+
+.container-paciente { 
+    width: 90%;
+    margin: 5vh auto;
+    padding: 20px;
+    box-shadow: 2px 2px 10px #ccc;
+    gap: 20px;
+    
+}
+
+
+.container-paciente .header-title{
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    
+   
+}
+
+.records{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+}
+
+.records th{
+    height: 50px;
+    background-color: var(--primary-color);
+    padding-left: 20px;
+    font-size: 1.2rem;    
+}
+.records td{
+    height: 50px;
+    padding-left: 20px;
+}
+
+.records th:last-child,
+.records td:last-child{
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.records tr:hover{
+    background-color: var(--secundary-color);
+}
+
+.button{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: #004D80;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+.button:hover {
+    background-color: #013353;
+}
+
+
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/listarPacientes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SaúdePrime</title>
+</head>
+<header>
+    <div class="container">
+        <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="#">Consultas</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">Histórico</a></li>
+        <li><a href="/pages/pacientes/litarPacientes.html">Pacientes</a></li>
+        <li><a href="#">Profissional de Saúde</a></li>
+        <li><a href="/pages/pacientes/litarPacientes.html">Exames</a></li>
+        <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
+        <li><button type="button" id="logout-button" onclick="handleLogout()">Sair</button></li>
+    </ul>
+</nav>
+
+<div class="container-patient">
+    <div class="patient-list">
+        <div class="list-header">
+            <h2>Lista de Profissional de Saúde</h2>
+            <a href="/pages/pacientes/formPacientes.html">
+                <button class="add-patient-button">Adicionar Novo Profissional</button>
+            </a>
+        </div>
+        <div class="patient-card">
+            <h3>João Silva</h3>
+            <p>CPF: 888-888-888-88</p>
+            <p>E-mail: joao@exemplo.com</p>
+            <p>Telefone: (83) 99999-9999</p>
+            <div class="actions">
+                <button>Editar</button>
+                <button>Excluir</button>
+            </div>
+        </div>
+        <div class="patient-card">
+            <h3>Maria dos Santos</h3>
+            <p>CPF: 999-999-999-99</p>
+            <p>E-mail: maria@exemplo.com</p>
+            <p>Telefone: (83) 99999-9999</p>
+            <div class="actions">
+                <button>Editar</button>
+                <button>Excluir</button>
+            </div>
+        </div>
+        <div class="patient-card">
+            <h3>Ana Paula</h3>
+            <p>CPF: 777-777-777-77</p>
+            <p>E-mail: ana@exemplo.com</p>
+            <p>Telefone: (83) 99999-9999</p>
+            <div class="actions">
+                <button>Editar</button>
+                <button>Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="content">
+        <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="/scripts/validationEmail.js"></script>
+<script src="/scripts/validateFormCadastro.js"></script>
+<script src="/scripts/logout.js"></script>
+</body>
+</html>
