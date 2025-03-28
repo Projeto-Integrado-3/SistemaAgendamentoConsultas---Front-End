@@ -117,7 +117,7 @@ const editClient = (index) => {
     const client = readClient()[index]
     client.index = index
     fillFields(client)
-    document.querySelector(".modal-header>h2").textContent = `Editando paciente ${client.nome}`
+    document.querySelector(".modal-header>h2").textContent = `Editando profissional ${client.nome}`
     openModal()
 
 }
@@ -129,7 +129,7 @@ const editDelete = (event) => {
             editClient(index)
         } else {
             const client = readClient()[index]
-            const response = confirm(`Deseja realmente excluir o paciente ${client.nome}`)
+            const response = confirm(`Deseja realmente excluir o profissional ${client.nome}`)
             if (response) {
                 deleteClient(index)
                 updateTable()
@@ -145,7 +145,7 @@ updateTable()
 
 //eventos
 document.getElementById('cadastrarCliente').addEventListener('click', () => {
-    document.querySelector(".modal-header>h2").textContent = "Novo Paciente";
+    document.querySelector(".modal-header>h2").textContent = "Novo Profissional";
     clearFields(); 
     document.getElementById('nome').dataset.index = 'new';
     openModal();

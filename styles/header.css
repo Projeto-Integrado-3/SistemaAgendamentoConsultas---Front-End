@@ -1,12 +1,5 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo do header */
 header {
+    
     background-color: #004D80;
     padding: 10px 0;
     display: flex;
