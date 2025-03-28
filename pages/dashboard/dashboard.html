@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/dashboard.css">
@@ -20,12 +21,12 @@
 </header>
 <nav>
     <ul>
-        <li><a href="#">Consultas</a></li>
-        <li><a href="#">Agenda</a></li>
-        <li><a href="#">Histórico</a></li>
+        <li><a href="/pages/consultas.html">Consultas</a></li>
+        <li><a href="/pages/agenda.html">Agenda</a></li>
+        <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
         <li><a href="/pages/pacientes/litarPacientes.html">Pacientes</a></li>
         <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
-        <li><a href="/pages/pacientes/litarPacientes.html">Exames</a></li>
+        <li><a href="/pages/exames.html">Exames</a></li>
         <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
         <li><button type="button" id="logout-button" onclick="handleLogout()">Sair</button></li>
     </ul>
@@ -42,12 +43,13 @@
                 <button>Ver Detalhes</button>
             </div>
             <div class="button-container">
-                <button>Agendar Consultas</button>
-                <button class="green-button">Ver Histórico</button>
+                <a href="/pages/dashboard/formAgendamento.html"><button>Agendar Consultas</button></a>
+                <a href="/pages/dashboard/historico.html"><button class="green-button">Ver Histórico</button></a>
             </div>
         </div>
     </section>
 </main>
+
 <footer>
     <div class="content">
         <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
