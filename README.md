@@ -11,75 +11,60 @@ Este projeto consiste em um sistema de agendamento de consultas médicas, desenv
 * Confirmação e cancelamento de consultas.
 * Cadastro de pacientes e profissionais de saúde.
 * Interface intuitiva e fácil de usar.
-* Banco de dados para armazenar informações de consultas e usuários.
+* Controle de login e logout com autenticação.
+* Histórico de consultas e agendamentos.
+* Modal para cadastro e edição de informações.
+* Responsividade para dispositivos móveis.
 
 ## Tecnologias Utilizadas
 
-* **Backend:** (Ex: Node.js, Python/Django, Java/Spring Boot)
-* **Frontend:** (Ex: React, Angular, Vue.js)
-* **Banco de dados:** (Ex: PostgreSQL, MySQL, MongoDB)
-* **Outras:** (Ex: Bibliotecas específicas, frameworks)
+* **Frontend:** HTML5, CSS3, JavaScript.
+* **Banco de dados:** LocalStorage (para persistência de dados no navegador).
+* **Bibliotecas:** SweetAlert2 (para notificações e alertas).
 
 ## Instalação
 
-1.  Clone o repositório:
+1. Clone o repositório:
 
-    `git clone https://github.com/dolthub/dolt`
+    ```bash
+    git clone https://github.com/seu-usuario/sistema-agendamento-consultas.git
+    ```
 
-2.  Instale as dependências do backend:
+2. Abra o projeto em seu editor de código ou IDE preferido (ex.: Visual Studio Code).
 
-    `cd backend`
-    `npm install` (ou `pip install -r requirements.txt`, etc.)
-
-3.  Instale as dependências do frontend:
-
-    `cd ../frontend`
-    `npm install` (ou `yarn install`, etc.)
-
-4.  Configure o banco de dados:
-    * Crie um banco de dados com o nome especificado nas configurações.
-    * Execute as migrações do banco de dados (se aplicável).
-
-5.  Execute o backend:
-
-    `cd ../backend`
-    `npm start` (ou `python manage.py runserver`, etc.)
-
-6.  Execute o frontend:
-
-    `cd ../frontend`
-    `npm start` (ou `yarn start`, etc.)
+3. Configure o Live Server para visualizar o projeto localmente:
+    * Certifique-se de que a extensão Live Server está instalada no Visual Studio Code.
+    * Clique com o botão direito no arquivo `index.html` e selecione "Open with Live Server".
 
 ## Uso
 
-* Acesse a interface do sistema através do navegador.
-* Cadastre-se como paciente ou profissional de saúde.
-* Agende, visualize ou cancele consultas conforme necessário.
+1. Acesse a interface do sistema através do navegador.
+2. Cadastre-se como usuário.
+3. Realize login para acessar o painel de controle.
+4. Agende, visualize ou cancele consultas conforme necessário.
+5. Utilize as funcionalidades de cadastro e edição de pacientes e profissionais de saúde.
 
 ## Contribuição
 
 Contribuições são bem-vindas! Siga estas diretrizes:
 
-1.  Faça um fork do repositório.
-2.  Crie uma branch para sua funcionalidade: `git checkout -b minha-funcionalidade`.
-3.  Faça commit das suas alterações: `git commit -am 'Adiciona nova funcionalidade'`.
-4.  Faça push para a branch: `git push origin minha-funcionalidade`.
-5.  Crie um pull request.
+1. Faça um fork do repositório.
+2. Crie uma branch para sua funcionalidade: `git checkout -b minha-funcionalidade`.
+3. Faça commit das suas alterações: `git commit -am 'Adiciona nova funcionalidade'`.
+4. Faça push para a branch: `git push origin minha-funcionalidade`.
+5. Crie um pull request.
 
 ## Licença
 
-Este projeto está sob a licença [Nome da Licença] (Ex: MIT).
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## Contato
 
-* [Seu Nome] - [seu.email@exemplo.com]
-* [Nome do Integrante 2] - [email do integrante 2]
-* [Nome do Integrante 3] - [email do integrante 3]
+* Equipe do projeto - [equipe12ads@gmail.com]
 
 ## Informações Adicionais
 
-* [Links úteis, se houver]
-* [Informações sobre a equipe]
-* [Outros detalhes relevantes]
+* Este projeto foi desenvolvido como parte de um trabalho acadêmico.
+* Para mais informações, consulte a documentação do código ou entre em contato.
 
 
