@@ -1,0 +1,152 @@
+
+
+
+.header {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.header-title {
+    padding-top: 12px;
+    color: #fff;
+}
+
+.header p {
+    padding-top: 12px;
+    color: #fff;
+}
+
+
+/* Estilos da Página Inicial (index.css) */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.welcome {
+    text-align: left;
+    width: 80%; /* Aumenta a largura para 80% da tela */
+    max-width: 1000px; /* Aumenta a largura máxima */
+    background-color: #f9f9f9;
+    padding: 50px; /* Aumenta o preenchimento */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome h1 {
+    color: #4caf50;
+    margin-bottom: 25px; /* Aumenta a margem inferior */
+    font-size: 2.8em; /* Aumenta o tamanho da fonte */
+    font-weight: 600;
+    text-align: center;
+}
+
+.welcome h3 {
+    color: #000;
+    margin-bottom: 25px; /* Aumenta a margem inferior */
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    font-weight: 600;
+    text-align: center;
+}
+
+.welcome p {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    line-height: 1.8;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Aumenta o espaçamento entre os botões */
+    margin-top: 50px; /* Aumenta a margem superior */
+}
+
+.btn,
+.btn-secondary {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 18px 35px; /* Aumenta o preenchimento */
+    border-radius: 8px;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.3em; /* Aumenta o tamanho da fonte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    background-color: #4caf50;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: #004D80;
+}
+
+.btn-secondary:hover {
+    background-color: #2085d8;
+    transform: translateY(-3px);
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .welcome {
+        width: 95%; /* Aumenta a largura em telas menores */
+        padding: 30px;
+    }
+
+    .welcome h1 {
+        font-size: 2.2em;
+    }
+
+    .welcome p,
+    .welcome li {
+        font-size: 1.1em;
+    }
+
+    .btn,
+    .btn-secondary {
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+}
+
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn,
+    .btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .welcome {
+        padding: 20px;
+    }
+}
+

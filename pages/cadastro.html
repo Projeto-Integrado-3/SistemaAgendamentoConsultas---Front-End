@@ -1,80 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/cadastro.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
-    <title>SaúdePrime - Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tela Cadastro</title>
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <a href="/index.html"><img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo"></a>
-        </div>
+    <header class="header">
+        <a href="/index.html">
+            <h1 class="header-title">SaúdePrime</h1>
+        </a>
+        <p>Maximize a eficiência da sua clínica com nossa solução de gestão</p>
     </header>
 
-    <main>
 
-        <div class="container-form">
-            <h2>Cadastre-se</h2>
-            <form action="d#" method="POST" class="form" id="form">
-                <div class="form-content">
-                    <label for="username">Nome do usuário:</label>
-                    <input type="text" id="username" name="username" placeholder="Digite seu nome">
-                    <a>Aqui vai a mensagem de erro...</a>
-                </div>
+    <main class="container">
+        <div class="card">
+            <h1>Cadastrar</h1>
+            <div id="msgError" role="alert"></div>
+            <div id="msgSuccess" role="alert"></div>
 
-                <div class="form-content">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
-                    <a>Aqui vai a mensagem de erro...</a>
+            
+            <form class="form">
+                <div class="label-float">
+                    <input type="text" id="usuario" placeholder="" required>
+                    <label id="labelUsuario" for="usuario">Usuário</label>
                 </div>
-
-                <div class="form-content ">
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" placeholder="Digite sua senha">
-                    <a>Aqui vai a mensagem de erro...</a>
+                <div class="label-float">
+                    <input type="email" id="email" placeholder="" required>
+                    <label id="labelEmail" for="email">E-mail</label>
                 </div>
-
-                <div class="form-content">
-                    <label for="password-confirmation">Confirmação de senha:</label>
-                    <input type="password" id="password-confirmation" name="password-confirmation"
-                        placeholder="Confirme sua senha">
-                    <a>Aqui vai a mensagem de erro...</a>
+                <div class="label-float">
+                    <input type="password" id="senha" placeholder="" required>
+                    <label id="labelSenha" for="senha">Senha</label>
+                    <i id="verSenha" class="fa-solid fa-eye" aria-label="Mostrar/ocultar senha"></i>
                 </div>
-                <button type="submit" class="btn" id="login-button" onclick="redirectLogin()">Cadastrar</button>
+                <div class="label-float">
+                    <input type="password" id="confirmarsenha" placeholder="" required>
+                    <label id="labelConfirmSenha" for="confirmarsenha">Confirmar senha</label>
+                    <i id="verConfirmSenha" class="fa-solid fa-eye" aria-label="Mostrar/ocultar confirmação de senha"></i>
+                </div>
+                <div class="justify-center">
+                    <button type="button" onclick="cadastrar()">Cadastrar</button>
+                </div>
+                <p id="link">Já tem uma conta?<a href="/pages/login.html" aria-label="Ir para página de login">Faça login</a></p>
             </form>
-            <p class="register-link">Já tem uma conta? <a href="/pages/login.html" onclick="register()">Faça
-                    Login</a>.</p>
         </div>
-
     </main>
-
-
-    <footer>
-        <div class="content">
-            <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
-
-
-    <script src="/scripts/validateFormCadastro.js"></script>
-    <script src="/scripts/validationEmail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/scripts/cadastro.js"></script>
 </body>
-
 </html>

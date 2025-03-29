@@ -1,112 +1,171 @@
-main {
-  padding: 20px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-
-.container-form {
-  background-color: #fff;
+.header {
+  background-color: var(--primary-color);
   width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  margin: 14px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 120px;
+  text-align: center;
 }
 
-.container-form h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 32px;
-  /* color: #4caf50; */
+.header-title {
+  padding-top: 15px;
+  color: #fff;
+}
+
+.header p {
+  padding-top: 15px;
+  color: #fff;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.border {
+  border: 2px solid red;
+}
+
+.container {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--card-background);
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .form {
-  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.form-content {
-  margin-bottom: 8px;
-  padding-bottom: 18px;
-  position: relative;
-}
-
-.form-content label {
-  display: inline-block;
-  margin-bottom: 4px;
+h1 {
+  text-align: center;
+  color: var(--text-color);
   font-weight: bold;
-  color: #333;
 }
 
-.form-content input {
+.label-float input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-
-
-}
-
-.form-content input:focus {
+  padding: 10px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 1px solid var(--text-color);
   outline: none;
-  border-color: #4caf50;
+  min-width: 180px;
+  font-size: 1rem;
+  transition: all 0.3s ease-out;
+  border-radius: 0;
 }
 
-.form-content a {
+.label-float input:focus {
+  border-bottom: 2px solid var(--text-color);
+}
+
+.label-float {
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.label-float label {
+  color: var(--text-color);
+  font-weight: bold;
+  pointer-events: none;
   position: absolute;
-  bottom: -3px;
+  top: 0;
   left: 0;
-  visibility: hidden;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
 }
 
-.btn {
-  background-color: #004D80;
+.label-float input:focus + label,
+.label-float input:valid + label {
+  font-size: 0.8rem;
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--secondary-color);
+  width: 100%;
   color: #fff;
   border: none;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 25px;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
-  width: 100%;
-  margin-bottom: 10px;
-  transition: background-color 0.3s;
+  outline: none;
+  transition: all 0.3s ease-out;
 }
 
-.btn:hover {
-  background-color: #06395a;
+button:hover {
+  background-color: darkolivegreen;
 }
 
-.form-content.error input {
-  border-color: red;
+.justify-center {
+  display: flex;
+  justify-content: center;
 }
 
-.form-content.error a {
-  color: red;
-  font-size: 0.9rem;
-  display: block;
-  visibility: visible;
-}
-
-
-.register-link {
+p {
+  color: var(--text-color);
+  font-size: 1rem;
   text-align: center;
-  margin-top: 10px;
-  font-size: 0.9rem;
+  padding-top: 30px;
 }
 
-.register-link a {
-  color: #000;
-  font-weight: bold;
+#link a {
+  color: var(--text-color);
   text-decoration: none;
+  padding: 0 3px;
   font-weight: bold;
 }
 
-.register-link a:hover {
+#link a:hover {
   text-decoration: underline;
+}
+
+.fa-eye {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#msgError {
+  text-align: center;
+  color: var(--error-color);
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+#msgSuccess {
+  text-align: center;
+  color: var(--success-color);
+  background-color: #bbffbe;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+  .card {
+      width: 95%;
+  }
 }
