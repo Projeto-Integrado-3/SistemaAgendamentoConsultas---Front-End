@@ -1,8 +1,8 @@
 let btn = document.querySelector('.fa-eye')
 
 function entrar() {
-    let usuario = document.querySelector('#usuario');
-    let userLabel = document.querySelector('#userLabel');
+    let email = document.querySelector('#email');
+    let emailLabel = document.querySelector('#emailLabel');
 
     let senha = document.querySelector('#senha');
     let senhaLabel = document.querySelector('#senhaLabel');
@@ -11,7 +11,6 @@ function entrar() {
     let listaUser = [];
 
     let userValid = {
-        usuario: '',
         email: '',
         senha: ''
     };
@@ -21,9 +20,8 @@ function entrar() {
 
     // Percorre a lista de usuários e verifica se o usuário e senha correspondem
     listaUser.forEach((item) => {
-        if (usuario.value === item.usuario && senha.value === item.senha) {
+        if (email.value === item.email && senha.value === item.senha) {
             userValid = {
-                usuario: item.usuario,
                 email: item.email,
                 senha: item.senha
             };
@@ -31,7 +29,7 @@ function entrar() {
     });
 
     // Verifica se os campos estão preenchidos e se o usuário foi encontrado
-    if (usuario.value !== '' && senha.value !== '' && usuario.value === userValid.usuario && senha.value === userValid.senha) {
+    if (email.value !== '' && senha.value !== '' && email.value === userValid.email && senha.value === userValid.senha) {
 
         Swal.fire({
             icon: 'success',
@@ -45,9 +43,15 @@ function entrar() {
         });
         
 
-        // Gera o token e salva no localStorage
+        // Gera o token e salva no localStorage com o email como username
         let token = Math.random().toString(16).substring(2);
         localStorage.setItem('token', token);
+        
+        // Find user's name from listaUser
+        const user = listaUser.find(user => user.email === email.value);
+        if (user) {
+            userValid.usuario = user.nome;
+        }
         localStorage.setItem('userLogado', JSON.stringify(userValid));
         console.log('Token gerado:', token);
 
@@ -55,11 +59,11 @@ function entrar() {
     } else {
         
         // Define os estilos para vermelho (erro)
-        userLabel.setAttribute('style', 'color: red');
-        usuario.setAttribute('style', 'border-color: red');
+        emailLabel.setAttribute('style', 'color: red');
+        email.setAttribute('style', 'border-color: red');
         senhaLabel.setAttribute('style', 'color: red');
         senha.setAttribute('style', 'border-color: red');
-        usuario.focus();
+        email.focus();
         Swal.fire({
             icon: 'error',
             title: 'Erro no login',

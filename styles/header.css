@@ -1,5 +1,4 @@
 header {
-    
     background-color: #004D80;
     padding: 10px 0;
     display: flex;
@@ -12,10 +11,9 @@ header {
 header .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 8px;
-    padding: 8px;
-   
+    padding: 8px 20px;
 }
 
 header .container a {
@@ -38,6 +36,12 @@ header .title {
     color: #ffffff;
     font-size: 35px;
     font-weight: bold;
+}
+
+.username {
+    color: white;
+    font-size: 16px;
+    margin-left: auto;
 }
 
 /* Estilo do nav */
@@ -64,6 +68,13 @@ nav ul li a {
     padding: 8px 16px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav ul li a i {
+    font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -84,4 +95,18 @@ nav ul li a:hover {
 
 #logout-button:hover {
     background-color: #ff6b6b;
+}
+
+#saudacao {
+    color: white;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+#logado {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
 }

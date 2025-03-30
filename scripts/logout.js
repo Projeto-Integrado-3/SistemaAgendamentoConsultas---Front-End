@@ -13,8 +13,8 @@ if (!userLogado) {
         // Redireciona para a página de login após o alerta
         window.location.href = '../login.html';
     });
-} else {
-    logado.innerHTML = `Seja Bem vindo, ${userLogado.usuario}`;
+} else if (logado) {
+    logado.innerHTML = `${userLogado.usuario}`;
 }
 
 // Função de logout

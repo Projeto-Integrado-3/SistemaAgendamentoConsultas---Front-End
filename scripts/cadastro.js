@@ -1,10 +1,12 @@
-
 let btn = document.querySelector('.fa-eye')
 let btnConfirmSenha = document.querySelector('#verConfirmSenha')
 
-let usuario = document.querySelector('#usuario')
-let labelUsuario = document.querySelector('#labelUsuario')
-let validUsuario = false
+let nome = document.querySelector('#nome')
+let sobrenome = document.querySelector('#sobrenome')
+let labelNome = document.querySelector('#labelNome')
+let labelSobrenome = document.querySelector('#labelSobrenome')
+let validNome = false
+let validSobrenome = false
 
 let email = document.querySelector('#email')
 let labelEmail = document.querySelector('#labelEmail')
@@ -25,18 +27,18 @@ function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
 
-usuario.addEventListener('keyup', () => {
-    if (usuario.value.length <= 2) {
-        labelUsuario.setAttribute('style', 'color:red')
-        labelUsuario.innerHTML = `Usuario *insira no minimo 3 caracteres`
-        usuario.setAttribute('style', 'border-color: red')
-        validUsuario = false
+nome.addEventListener('keyup', () => {
+    if (nome.value.length <= 2) {
+        labelNome.setAttribute('style', 'color:red')
+        labelNome.innerHTML = `Nome *insira no minimo 3 caracteres`
+        nome.setAttribute('style', 'border-color: red')
+        validNome = false
 
     } else {
-        labelUsuario.setAttribute('style', 'color:green')
-        labelUsuario.innerHTML = "Usuario"
-        usuario.setAttribute('style', 'border-color: green')
-        validUsuario = true
+        labelNome.setAttribute('style', 'color:green')
+        labelNome.innerHTML = "Nome"
+        nome.setAttribute('style', 'border-color: green')
+        validNome = true
     }
 })
 
@@ -84,14 +86,29 @@ confirmarsenha.addEventListener('keyup', () => {
     }
 })
 
+sobrenome.addEventListener('keyup', () => {
+    if (sobrenome.value.length <= 2) {
+        labelSobrenome.setAttribute('style', 'color:red')
+        labelSobrenome.innerHTML = `Sobrenome *insira no minimo 3 caracteres`
+        sobrenome.setAttribute('style', 'border-color: red')
+        validSobrenome = false
+    } else {
+        labelSobrenome.setAttribute('style', 'color:green')
+        labelSobrenome.innerHTML = "Sobrenome"
+        sobrenome.setAttribute('style', 'border-color: green')
+        validSobrenome = true
+    }
+})
+
 function cadastrar() {
-    if (validUsuario && validEmail && validSenha && validConfirmSenha) {
+    if (validNome && validSobrenome && validEmail && validSenha && validConfirmSenha) {
 
         let listaUser = JSON.parse(localStorage.getItem('listaUser')) || []
 
         listaUser.push(
             {
-                usuario: usuario.value,
+                nome: nome.value,
+                sobrenome: sobrenome.value,
                 email: email.value,
                 senha: senha.value
             }
@@ -107,7 +124,7 @@ function cadastrar() {
             showConfirmButton: false
         }).then(() => {
             // Redireciona para a tela de login
-            window.location.href = '/pages/login/login.html';
+            window.location.href = '/pages/login.html';
         });
     } else {
         Swal.fire({
@@ -143,5 +160,3 @@ btnConfirmSenha.addEventListener('click', () => {
         inputSenha.setAttribute('type', 'password')
     }
 })
-
-

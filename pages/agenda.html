@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - SaúdePrime</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/agenda.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/pages/dashboard/dashboard.html">
+                <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
+            </a>
+            </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/pages/dashboard/dashboard.html"><i class="fas fa-home"></i>Início</a></li>
+            <li><a href="/pages/agenda.html">Agenda</a></li>
+            <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
+            <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
+            <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
+            <li><a href="/pages/exames.html">Exames</a></li>
+            <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
+            <li><button type="button" id="logout-button" onclick="handleLogout()">Sair</button></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="agenda-container">
+            <h2>Agenda</h2>
+            <select id="agendaFilter" class="agenda-filter">
+                <option value="hoje">Hoje</option>
+                <option value="semana">Esta Semana</option>
+                <option value="mes">Este Mês</option>
+                <option value="todos">Todos</option>
+            </select>
+            <div id="appointments"></div>
+            <div class="button-container">
+                <a href="/pages/dashboard/formAgendamento.html" class="agenda-btn">Novo Agendamento</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="content">
+            <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Display appointment data
+        window.addEventListener('load', function() {
+            const appointmentsDiv = document.getElementById('appointments');
+            const lastAppointment = localStorage.getItem('lastAppointment');
+
+            if (lastAppointment) {
+                const appointment = JSON.parse(lastAppointment);
+                appointmentsDiv.innerHTML = `
+                    <div class="appointment-card">
+                        <p>Especialidade: ${appointment.especialidade}</p>
+                        <p>Profissional: ${appointment.profissional}</p>
+                        <p>Data: ${appointment.data}</p>
+                        <p>Horário: ${appointment.horario}</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+
+    <script src="/scripts/header.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+.exames-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #004D80;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.exame-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.exame-item:hover {
+    transform: translateY(-2px);
+}
+
+.exame-item h3 {
+    color: #004D80;
+    margin-bottom: 10px;
+}
+
+.exame-item p {
+    color: #666;
+    margin: 5px 0;
+}

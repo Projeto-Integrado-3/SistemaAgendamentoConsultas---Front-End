@@ -16,19 +16,20 @@
 </head>
 <header>
     <div class="container">
-        <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
+        <a href="/pages/dashboard/dashboard.html">
+            <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
+        </a>
     </div>
 </header>
 <nav>
     <ul>
-        <li><a href="#">Consultas</a></li>
-        <li><a href="#">Agenda</a></li>
-        <li><a href="#">Histórico</a></li>
-        <li><a href="/pages/pacientes/litarPacientes.html">Pacientes</a></li>
-        <li><a href="#">Profissional de Saúde</a></li>
-        <li><a href="/pages/pacientes/litarPacientes.html">Exames</a></li>
+        <li><a href="/pages/dashboard/dashboard.html">Início</a></li>
+        <li><a href="/pages/agenda.html">Agenda</a></li>
+        <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
+        <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
+        <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
+        <li><a href="/pages/exames.html">Exames</a></li>
         <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
-        <li><button type="button" id="logout-button" onclick="handleLogout()">Sair</button></li>
     </ul>
 </nav>
 
@@ -63,7 +64,7 @@
                 <span class="modal-close" id="modalClose">&#10006;</span>
             </header>
             <form id="form" class="modal-form">
-                
+
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Informe o nome do profissional"
                     required>
@@ -94,7 +95,7 @@
 
 
                 <!-- <input type="" id="especialidade" class="modal-field" placeholder="Escolha a especialidade" required> -->
-                
+
             </form>
 
             <footer class="modal-footer">
@@ -123,3 +124,33 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Profissionais - SaúdePrime</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/listarProfissional.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/pages/dashboard/dashboard.html">
+                <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
+            </a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/pages/dashboard/dashboard.html">Início</a></li>
+            <li><a href="/pages/agenda.html">Agenda</a></li>
+            <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
+            <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
+            <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
+            <li><a href="/pages/exames.html">Exames</a></li>
+            <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
+        </ul>
+    </nav>

@@ -12,30 +12,32 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>SaúdePrime</title>
-
 </head>
+
 <header>
     <div class="container">
-        <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
-    </div>
+        <a href="/pages/dashboard/dashboard.html"><img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo"></a>
+        </div>
 </header>
+
 <nav>
     <ul>
-        <li><a href="/pages/consultas.html">Consultas</a></li>
+        <li><a href="/pages/dashboard/dashboard.html">Início</a></li>
         <li><a href="/pages/agenda.html">Agenda</a></li>
         <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
-        <li><a href="/pages/pacientes/litarPacientes.html">Pacientes</a></li>
+        <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
         <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
         <li><a href="/pages/exames.html">Exames</a></li>
-        <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
         <li><button type="button" id="logout-button" onclick="sair()">Sair</button></li>
+        <li id="saudacao"><h1 id="logado"></h1></li>
+
     </ul>
 </nav>
+
 
 <main>
     <section class="dashboard">
         <div class="container">
-            <h2 id="logado"></h2>
             <div class="card">
                 <h4>Próxima Consulta</h4>
                 <p>Psicólogo - Dr. Assis Antônio</p>
@@ -61,8 +63,26 @@
         </div>
     </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/scripts/logout.js"></script>
+<script src="/scripts/header.js"></script>
+<script>
+    function sair(){
+        Swal.fire({
+            title: 'Deseja realmente sair?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Sim',
+            cancelButtonText: 'Não',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/pages/login.html';
+            }
+        })
+    }
+</script>
+
 </body>
 
 </html>
