@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agenda_medica.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SaúdePrime</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/logo.png" alt="Logo SaúdePrime" class="logo">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/pages/consultas.html">Consultas</a></li>
+            <li><a href="/pages/agenda_medica.html">Agenda</a></li>
+            <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
+            <li><a href="/pages/pacientes/litarPacientes.html">Pacientes</a></li>
+            <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
+            <li><a href="/pages/pacientes/litarPacientes.html">Exames</a></li>
+            <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
+            <li><button type="button" id="logout-button" onclick="handleLogout()">Sair</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-area">
+            <div class="button-container">
+                <button id="buttonData">Data</button>
+                <button id="buttonEspecialidade">Especialidade</button>
+                <button id="buttonStatus">Status</button>
+            </div>
+
+            <div id="div1">
+                <div class="text-inputs">
+                    <h3>03/03/2025 - 10:30</h3>
+                    <h4>Dr. Assis Antônio - Psicólogo</h4>
+                    <h4 class="pendente">Status: Pendente</h4>
+                </div>
+                <div class="buttons">
+                    <button id="buttonConfirmar">Confirmar</button>
+                    <button id="buttonEditar">Editar</button>
+                    <button id="buttonCancelar">Cancelar</button>
+                </div>
+            </div>
+
+            <div id="div2">
+                <div class="text-inputs">
+                    <h3>05/03/2025 - 14:00</h3>
+                    <h4>João Silva - Cardiologista</h4>
+                    <h4 class="confirmada">Status: Confirmada</h4>
+                </div>
+                <div class="buttons">
+                    <button id="buttonEditar">Editar</button>
+                    <button id="buttonCancelar">Cancelar</button>
+                </div>
+            </div>
+
+            <div id="div3">
+                <div class="text-inputs">
+                    <h3>03/03/2025 - 10:30</h3>
+                    <h4>Maria Luzia Gomes - Psicóloga</h4>
+                    <h4 class="cancelada">Status: Cancelada</h4>
+                </div>
+                <div class="buttons">
+                    <button id="buttonVizualizar">Vizualizar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content">
+            <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="agenda_medica.js"></script>
+    <script src="/scripts/logout.js"></script>
+</body>
+
+</html>

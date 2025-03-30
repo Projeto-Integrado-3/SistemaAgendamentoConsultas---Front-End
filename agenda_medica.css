@@ -1,0 +1,211 @@
+header {
+    
+    background-color: #004D80;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+   
+}
+
+header .container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+header .container a img {
+    width: 300px;
+}
+
+header .logo {
+    height: 65px;
+    display: block;
+}
+
+header .title {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Estilo do nav */
+nav {
+    background-color: #004D80;
+    padding: 10px 0;
+    border-bottom: 1px solid #003d66;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botão de logout */
+#logout-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#logout-button:hover {
+    background-color: #ff6b6b;
+}
+
+/* ... Div Main ... */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.content-area {
+    width: 80%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* ... Cor dos Botões da Div Main ... */
+
+.content-area button {
+    background-color: #E6F0F8;
+    color: black; 
+    border: 2px solid #2A5B8C;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ...  ... */
+
+.button-container {
+    margin-bottom: 10px;
+}
+
+/* ... Div's 1, 2 e 3 ... */
+
+#div1, #div2, #div3 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* ...  ... */
+
+.content-area h3 {
+    color: #2A5B8C;
+    font-weight: bold;
+}
+
+/* ...  ... */
+
+.content-area h4 {
+    font-weight: normal;
+}
+
+/* ... Cor dos Status ... */
+
+.content-area h4 {
+    font-weight: normal;
+}
+
+.content-area h4 strong {
+    font-weight: bold;
+}
+
+.content-area h4.pendente {
+    color: gray;
+}
+
+.content-area h4.confirmada {
+    color: rgb(0, 158, 0); 
+}
+
+.content-area h4.cancelada {
+    color: red;
+}
+
+footer {
+    background-color: #004D80;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .content p {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+/* Estilo dos ícones sociais */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+footer .social-icons a:hover {
+    background-color: #091581;
+    color: #fff;
+}
