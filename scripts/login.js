@@ -15,10 +15,10 @@ function entrar() {
         senha: ''
     };
 
-    // Recupera a lista de usuários do localStorage
+    
     listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
 
-    // Percorre a lista de usuários e verifica se o usuário e senha correspondem
+   
     listaUser.forEach((item) => {
         if (email.value === item.email && senha.value === item.senha) {
             userValid = {
@@ -28,7 +28,7 @@ function entrar() {
         }
     });
 
-    // Verifica se os campos estão preenchidos e se o usuário foi encontrado
+    
     if (email.value !== '' && senha.value !== '' && email.value === userValid.email && senha.value === userValid.senha) {
 
         Swal.fire({
@@ -38,16 +38,16 @@ function entrar() {
             timer: 2000,
             showConfirmButton: false
         }).then(() => {
-            // Redireciona para a página inicial
+           
             window.location.href = '../pages/dashboard/dashboard.html';
         });
         
 
-        // Gera o token e salva no localStorage com o email como username
+       
         let token = Math.random().toString(16).substring(2);
         localStorage.setItem('token', token);
         
-        // Find user's name from listaUser
+       
         const user = listaUser.find(user => user.email === email.value);
         if (user) {
             userValid.usuario = user.nome;
@@ -58,7 +58,7 @@ function entrar() {
         
     } else {
         
-        // Define os estilos para vermelho (erro)
+       
         emailLabel.setAttribute('style', 'color: red');
         email.setAttribute('style', 'border-color: red');
         senhaLabel.setAttribute('style', 'color: red');

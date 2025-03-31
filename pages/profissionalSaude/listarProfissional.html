@@ -12,146 +12,125 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>SaúdePrime</title>
+    <title>SaúdePrime - Lista de Profissionais</title>
 </head>
-<header>
-    <div class="container">
-        <a href="/pages/dashboard/dashboard.html">
-            <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
-        </a>
-    </div>
-</header>
-<nav>
-    <ul>
-        <li><a href="/pages/dashboard/dashboard.html">Início</a></li>
-        <li><a href="/pages/agenda_medica.html">Consultas</a></li>
-        <li><a href="/pages/agenda.html">Agenda</a></li>
-        <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
-        <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
-        <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
-        <li><a href="/pages/exames.html">Exames</a></li>
-        <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
-    </ul>
-</nav>
 
-
-<main class="container-profissional">
-
-    <h1 class="header-title">Lista de Profissionais</h1>
-
-    <button type="button" class="button1 blue mobile" id="cadastrarCliente">Cadastrar Profissional</button>
-    <table id="tableClient" class="records">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>CPF</th>
-                <th>CRM</th>
-                <th>E-mail</th>
-                <th>Telefone</th>
-                <th>Endereço</th>
-                <th>Especialidade</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <header class="modal-header">
-                <h2>Novo Profissional</h2>
-                <span class="modal-close" id="modalClose">&#10006;</span>
-            </header>
-            <form id="form" class="modal-form">
-
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Informe o nome do profissional"
-                    required>
-
-                <label for="cpf">CPF:</label>
-                <input type="number" id="cpf" class="modal-field" placeholder="Informe o CPF do profissional" required>
-
-                <label for="crm">CRM:</label>
-                <input type="number" id="crm" class="modal-field" placeholder="Informe o CRM do profissional" required>
-
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" class="modal-field" placeholder="Informe o email do profissional" required>
-
-                <label for="telefone">Telefone:</label>
-                <input type="number" id="telefone" class="modal-field" placeholder="Informe o telefone do profissional" required>
-
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" class="modal-field" placeholder="Endereço do profissional" required>
-
-                <label for="especialidade">Especialidade:</label>
-                <select id="especialidade" class="modal-field" required>
-                    <option selected disabled value="">Selecione uma Especialidade</option>
-                    <option>Cardiologista</option>
-                    <option>Endocrinologista</option>
-                    <option>Neurologista</option>
-                    <option>Oncologista</option>
-                </select>
-
-
-                <!-- <input type="" id="especialidade" class="modal-field" placeholder="Escolha a especialidade" required> -->
-
-            </form>
-
-            <footer class="modal-footer">
-                <button id="salvar" class="button blue">Salvar</button>
-                <a href="/pages/profissionalSaude/listarProfissional.html"><button id="cancelar" class="button red">Cancelar</button></a>
-            </footer>
-
-        </div>
-    </div>
-</main>
-
-<footer>
-    <div class="content">
-        <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </div>
-</footer>
-
-<script src="/scripts/crudProfissional.js"></script>
-<script src="/scripts/logout.js"></script>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Profissionais - SaúdePrime</title>
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/listarProfissional.css">
-</head>
 <body>
     <header>
         <div class="container">
-            <a href="/pages/dashboard/dashboard.html">
+            <figure>
                 <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
-            </a>
+                <figcaption hidden>Logo da SaúdePrime</figcaption>
+            </figure>
         </div>
     </header>
+
     <nav>
         <ul>
-            <li><a href="/pages/dashboard/dashboard.html">Início</a></li>
+            <li><a href="/pages/dashboard/dashboard.html"><i class="fas fa-home"></i>Início</a></li>
+            <li><a href="/pages/agenda_medica.html">Consultas</a></li>
             <li><a href="/pages/agenda.html">Agenda</a></li>
             <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
             <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
             <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
             <li><a href="/pages/exames.html">Exames</a></li>
-            <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
+           
+            <li><button type="button" id="logout-button" onclick="sair()" aria-label="Sair">Sair</button></li>
+            <li><h1 id="logado"></h1></li>
         </ul>
     </nav>
+
+    <main class="container-profissional">
+        <section>
+            <h1 class="header-title">Lista de Profissionais</h1>
+            <button type="button" class="button1 blue mobile" id="cadastrarCliente">Cadastrar Profissional</button>
+
+            <table id="tableClient" class="records">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>CRM</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
+                        <th>Especialidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <div class="modal" id="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <h2 id="modalTitle">Novo Profissional</h2>
+                        <span class="modal-close" id="modalClose">&#10006;</span>
+                    </header>
+                    <form id="form" class="modal-form">
+
+                        <label for="nome" id="labelNome">Nome:</label>
+                        <input type="text" id="nome" data-index="new" class="modal-field"
+                            placeholder="Informe o nome do profissional" required aria-label="Nome do profissional">
+
+                        <label for="cpf" id="labelCPF">CPF:</label>
+                        <input type="number" id="cpf" class="modal-field" placeholder="Informe o CPF do profissional"
+                            required aria-label="CPF do profissional">
+
+                        <label for="crm" id="labelCRM">CRM:</label>
+                        <input type="text" id="crm" class="modal-field" placeholder="Informe o CRM do profissional"
+                            required aria-label="CRM do profissional">
+
+                        <label for="email" id="labelEmail">E-mail:</label>
+                        <input type="email" id="email" class="modal-field"
+                            placeholder="Informe o email do profissional" required aria-label="Email do profissional">
+
+                        <label for="telefone" id="labelTelefone">Telefone:</label>
+                        <input type="text" id="telefone" class="modal-field"
+                            placeholder="Informe o telefone do profissional" required aria-label="Telefone do profissional">
+
+                        <label for="endereco" id="labelEndereco">Endereço:</label>
+                        <input type="text" id="endereco" class="modal-field"
+                            placeholder="Endereço do profissional" required aria-label="Endereço do profissional">
+
+                        <label for="especialidade" id="labelEspecialidade">Especialidade:</label>
+                        <select id="especialidade" class="modal-field" required aria-label="Especialidade do profissional">
+                            <option selected disabled value="">Selecione uma Especialidade</option>
+                            <option>Cardiologista</option>
+                            <option>Endocrinologista</option>
+                            <option>Neurologista</option>
+                            <option>Oncologista</option>
+                        </select>
+
+                    </form>
+
+                    <footer class="modal-footer">
+                        <button id="salvar" class="button blue">Salvar</button>
+                        <a href="/pages/profissionalSaude/listarProfissional.html"><button id="cancelar"
+                                class="button red">Cancelar</button></a>
+                    </footer>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="content">
+            <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
+            <aside class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </aside>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/scripts/validadeFormPacientes.js"></script>
+    <script src="/scripts/crudProfissional.js"></script>
+    <script src="/scripts/logout.js"></script>
+</body>
+
+</html>

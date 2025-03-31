@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const pacienteInput = document.getElementById('paciente');
     const especialidadeSelect = document.getElementById('especialidade');
     const profissionalSelect = document.getElementById('profissional');
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedDate = null;
 
     dataBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             dataBtns.forEach(b => b.classList.remove('selected'));
             this.classList.add('selected');
             selectedDate = this.textContent;
@@ -42,13 +42,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    document.querySelector('.confirmar-btn').addEventListener('click', function() {
+    document.querySelector('.confirmar-btn').addEventListener('click', function () {
         if (!especialidadeSelect.value || !profissionalSelect.value || !selectedDate || !horarioSelect.value) {
-            alert('Por favor, preencha todos os campos.');
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro!',
+                text: 'Por favor, preencha todos os campos.',
+            });
             return;
         }
 
-        // Save appointment data to localStorage
+       
         const appointmentData = {
             paciente: pacienteInput.value,
             idade: document.getElementById('idade').value,
@@ -57,9 +61,26 @@ document.addEventListener('DOMContentLoaded', function() {
             data: selectedDate,
             horario: formatTime(horarioSelect.value)
         };
-        localStorage.setItem('lastAppointment', JSON.stringify(appointmentData));
 
-        // Redirect to agenda page
-        window.location.href = '/pages/agenda.html';
+       
+        const appointments = JSON.parse(localStorage.getItem('appointments')) ?? [];
+
+       
+        appointments.push(appointmentData);
+
+       
+        localStorage.setItem('appointments', JSON.stringify(appointments));
+
+      
+        Swal.fire({
+            icon: 'success',
+            title: 'Agendamento Confirmado!',
+            text: 'O agendamento foi salvo com sucesso.',
+            timer: 2000,
+            showConfirmButton: false
+        }).then(() => {
+            
+            window.location.href = '/pages/agenda.html';
+        });
     });
 });

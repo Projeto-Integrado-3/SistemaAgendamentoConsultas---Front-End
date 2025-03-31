@@ -40,7 +40,7 @@ Este projeto consiste em um sistema de agendamento de consultas médicas, desenv
 
 1. Acesse a interface do sistema através do navegador.
 2. Cadastre-se como usuário.
-3. Realize login para acessar o painel de controle.
+3. Realize login com email e senha cadastrada para acessar o painel de controle.
 4. Agende, visualize ou cancele consultas conforme necessário.
 5. Utilize as funcionalidades de cadastro e edição de pacientes e profissionais de saúde.
 
@@ -56,7 +56,7 @@ Contribuições são bem-vindas! Siga estas diretrizes:
 
 ## Licença
 
-Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT. Consulte o arquivo MIT License para mais detalhes.
 
 ## Contato
 

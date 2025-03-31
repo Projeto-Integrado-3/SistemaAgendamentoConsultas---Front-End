@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda - SaúdePrime</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/agenda.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
+
 <body>
     <header>
         <div class="container">
             <a href="/pages/dashboard/dashboard.html">
                 <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
             </a>
-            </div>
+        </div>
     </header>
     <nav>
         <ul>
             <li><a href="/pages/dashboard/dashboard.html"><i class="fas fa-home"></i>Início</a>
             </li>
-             <li><a href="/pages/agenda_medica.html">Consultas</a></li>
+            <li><a href="/pages/agenda_medica.html">Consultas</a></li>
             <li><a href="/pages/agenda.html">Agenda</a></li>
             <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
             <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
             <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
             <li><a href="/pages/exames.html">Exames</a></li>
             <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
-            <li><button type="button" id="logout-button" onclick="handleLogout()">Sair</button></li>
+            <li><button type="button" id="logout-button" onclick="sair()">Sair</button></li>
+            <li><h1 id="logado"></h1></li>
         </ul>
     </nav>
     <main>
@@ -57,61 +62,9 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Display appointment data
-        window.addEventListener('load', function() {
-            const appointmentsDiv = document.getElementById('appointments');
-            const lastAppointment = localStorage.getItem('lastAppointment');
 
-            // Fixed appointment
-            const fixedAppointment = `
-                <div class="appointment-card">
-                    <div class="appointment-info">
-                        <p>Paciente: Maria Silva</p>
-                        <p>Especialidade: Psicologia</p>
-                        <p>Profissional: Dr. Assis Antônio</p>
-                        <p>Data: 22 de abr. de 2025</p>
-                        <p>Horário: 11:30</p>
-                        <p class="status pendente">Status: Pendente</p>
-                    </div>
-                    <div class="action-buttons">
-                        <button class="btn-confirmar" onclick="handleAppointmentAction('confirmar', 'fixed')">Confirmar</button>
-                        <button class="btn-editar" onclick="handleAppointmentAction('editar', 'fixed')">Editar</button>
-                        <button class="btn-cancelar" onclick="handleAppointmentAction('cancelar', 'fixed')">Cancelar</button>
-                    </div>
-                </div>
-            `;
-
-            let appointments = fixedAppointment;
-
-            if (lastAppointment) {
-                const appointment = JSON.parse(lastAppointment);
-                appointments += `
-                    <div class="appointment-card">
-                        <div class="appointment-info">
-                            <p>Especialidade: ${appointment.especialidade}</p>
-                            <p>Profissional: ${appointment.profissional}</p>
-                            <p>Data: ${appointment.data}</p>
-                            <p>Horário: ${appointment.horario}</p>
-                            <p class="status pendente">Status: Pendente</p>
-                        </div>
-                        <div class="action-buttons">
-                            <button class="btn-confirmar" onclick="handleAppointmentAction('confirmar', 'new')">Confirmar</button>
-                            <button class="btn-editar" onclick="handleAppointmentAction('editar', 'new')">Editar</button>
-                            <button class="btn-cancelar" onclick="handleAppointmentAction('cancelar', 'new')">Cancelar</button>
-                        </div>
-                    </div>
-                `;
-            }
-
-            appointmentsDiv.innerHTML = appointments;
-        });
-    </script>
-
-    <script src="/scripts/header.js"></script>
+    <script src="/scripts/logout.js"></script>
     <script src="/scripts/agenda.js"></script>
-
 </body>
-</html>
 
- 
+</html>

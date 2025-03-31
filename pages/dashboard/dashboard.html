@@ -22,7 +22,7 @@
 
 <nav>
     <ul>
-        <li><a href="/pages/dashboard/dashboard.html">Início</a></li>
+        <li><a href="/pages/dashboard/dashboard.html"><i class="fas fa-home"></i>Início</a></li>
         <li><a href="/pages/agenda_medica.html">Consultas</a></li>
         <li><a href="/pages/agenda.html">Agenda</a></li>
         <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
@@ -30,7 +30,7 @@
         <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
         <li><a href="/pages/exames.html">Exames</a></li>
         <li><button type="button" id="logout-button" onclick="sair()">Sair</button></li>
-        <li id="saudacao"><h1 id="logado"></h1></li>
+        <li><h1 id="logado"></h1></li>
 
     </ul>
 </nav>
@@ -67,22 +67,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/scripts/logout.js"></script>
-<script src="/scripts/header.js"></script>
-<script>
-    function sair(){
-        Swal.fire({
-            title: 'Deseja realmente sair?',
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonText: 'Sim',
-            cancelButtonText: 'Não',
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = '/pages/login.html';
-            }
-        })
-    }
-</script>
+
+
 
 </body>
 

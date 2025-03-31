@@ -10,8 +10,8 @@ const closeModal = () => {
 
 }
 
-const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? []
-const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
+const getLocalStorage = () => JSON.parse(localStorage.getItem('db_paci')) ?? []
+const setLocalStorage = (dbClient) => localStorage.setItem("db_paci", JSON.stringify(dbClient))
 
 
 // CRUD - Create, reed update delete
@@ -57,31 +57,54 @@ const saveClient = () => {
             telefone: document.getElementById('telefone').value,
             endereco: document.getElementById('endereco').value
         }
+
+
+        if (!client.nome || !client.email || !client.cpf || !client.telefone || !client.endereco) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro!',
+                text: 'Todos os campos devem ser preenchidos.',
+            });
+            return;
+        }
+
         const index = document.getElementById('nome').dataset.index
         if (index == 'new') {
             createClient(client)
-            updateTable()
-            closeModal()
+            
+            
         } else {
             updateClient(index, client)
-            updateTable()
-            closeModal()
+
         }
 
+        updateTable()
+        closeModal()
 
+        Swal.fire({
+            icon: 'success',
+            title: 'Sucesso!',
+            text: 'Paciente salvo com sucesso!',
+            timer: 2000,
+            showConfirmButton: false
+        });
+
+        closeModal()
 
     }
 
 }
+
+
 const createRow = (client, index) => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = `
     
-            <td>${client.nome}</td>
-            <td>${client.email}</td>
-            <td>${client.cpf}</td>
-            <td>${client.telefone}</td>
-            <td>${client.endereco}</td>
+            <td data-label="Nome">${client.nome}</td>
+            <td data-label="E-mail">${client.email}</td>
+            <td data-label="CPF">${client.cpf}</td>
+            <td data-label="Telefone">${client.telefone}</td>
+            <td <td data-label="Endereço">${client.endereco}</td>
             
             <td>
                 <button type="button" class="button green" id="edit-${index}">Editar</button>
@@ -117,27 +140,45 @@ const editClient = (index) => {
     const client = readClient()[index]
     client.index = index
     fillFields(client)
-    document.querySelector(".modal-header>h2").textContent = `Editando paciente ${client.nome}`
+    document.querySelector(".modal-header>h2").textContent = `Editando Paciente ${client.nome}`
     openModal()
 
 }
 
 const editDelete = (event) => {
     if (event.target.type == 'button') {
-        const [action, index] = event.target.id.split('-')
+        const [action, index] = event.target.id.split('-');
         if (action == 'edit') {
-            editClient(index)
-        } else {
-            const client = readClient()[index]
-            const response = confirm(`Deseja realmente excluir o paciente ${client.nome}`)
-            if (response) {
-                deleteClient(index)
-                updateTable()
-            }
+            editClient(index);
+        } else if (action == 'delete') {
+            const client = readClient()[index];
 
+           
+            Swal.fire({
+                title: `Deseja realmente excluir o paciente ${client.nome}?`,
+                text: "Esta ação não pode ser desfeita!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sim, excluir!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    deleteClient(index);
+                    updateTable();
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Excluído!',
+                        text: `O paciente ${client.nome} foi excluído com sucesso.`,
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
+                }
+            });
         }
     }
-}
+};
 updateTable()
 
 
@@ -146,7 +187,7 @@ updateTable()
 //eventos
 document.getElementById('cadastrarCliente').addEventListener('click', () => {
     document.querySelector(".modal-header>h2").textContent = "Novo Paciente";
-    clearFields(); 
+    clearFields();
     document.getElementById('nome').dataset.index = 'new';
     openModal();
 });
@@ -154,3 +195,4 @@ document.getElementById('cadastrarCliente').addEventListener('click', () => {
 document.getElementById('modalClose').addEventListener('click', closeModal)
 document.getElementById('salvar').addEventListener('click', saveClient)
 document.querySelector('#tableClient>tbody').addEventListener('click', editDelete)
+
