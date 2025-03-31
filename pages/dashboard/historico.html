@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/historico.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SaúdePrime - Lista de Pacientes</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <figure>
+                <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
+                <figcaption hidden>Logo da SaúdePrime</figcaption>
+            </figure>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/pages/dashboard/dashboard.html">Início</a></li>
+            <li><a href="/pages/agenda_medica.html">Consultas</a></li>
+            <li><a href="/pages/agenda.html">Agenda</a></li>
+            <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
+            <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
+            <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
+            <li><a href="/pages/exames.html">Exames</a></li>
+            <li><button type="button" id="logout-button" onclick="sair()" aria-label="Sair">Sair</button></li>
+            <li><a><strong><span id="logado"></span></strong></a></li>
+        </ul>
+    </nav>
+
+
+    <main class="container-paciente">
+        <section>
+            <h1 class="header-title">Histórico de Consultas</h1>
+            <form id="formFiltros" class="filters">
+                <label for="filtroPaciente">Paciente:</label>
+                <input type="text" id="filtroPaciente" placeholder="Digite o nome do paciente">
+
+                <label for="filtroProfissional">Profissional:</label>
+                <input type="text" id="filtroProfissional" placeholder="Digite o nome do profissional">
+
+                <label for="filtroData">Data:</label>
+
+                <button type="button" id="aplicarFiltros" class="button blue">Aplicar Filtros</button>
+                <button type="button" id="limparFiltros" class="button red">Limpar Filtros</button>
+            </form>
+
+
+
+            <table id="tableClient" class="records">
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Idade</th>
+                        <th>Especialidade</th>
+                        <th>Profissional</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+    </main>
+    <footer>
+        <div class="content">
+            <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
+            <aside class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </aside>
+        </div>
+    </footer>
+   
+    <script src="/scripts/logout.js"></script>
+</body>
+
+</html>

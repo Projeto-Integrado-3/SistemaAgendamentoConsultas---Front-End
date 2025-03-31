@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,7 +20,6 @@
     <nav>
         <ul>
             <li><a href="/pages/dashboard/dashboard.html">Início</a></li>
-            <li><a href="/pages/agenda_medica.html">Consultas</a></li>
             <li><a href="/pages/agenda.html">Agenda</a></li>
             <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
             <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
@@ -30,49 +30,55 @@
     </nav>
     <main>
         <div class="agendamento-container">
-            <div class="agendamento-card">
-                <div class="passo">
-                    <h3>Passo 1: Seleção de Especialidade</h3>
-                    <select id="especialidade">
-                        <option value="" disabled selected>Selecione a especialidade</option>
-                        <option value="cardiologia">Cardiologia</option>
-                        <option value="pediatria">Pediatria</option>
-                        <option value="ortopedia">Ortopedia</option>
-                    </select>
+            <div class="passo">
+                <h3>Passo 1: Dados do Paciente</h3>
+                <div class="form-group">
+                    <input type="text" id="paciente" placeholder="Digite o nome do paciente" required>
+                    <input type="number" id="idade" placeholder="Digite a idade do paciente" required min="0" max="120">
                 </div>
+            </div>
 
-                <div class="passo">
-                    <h3>Passo 2: Seleção de Profissional</h3>
-                    <select id="profissional">
-                        <option value="" disabled selected>Selecione o profissional</option>
-                        <option value="dr-joao">Dr. João Silva</option>
-                        <option value="dra-maria">Dra. Maria Santos</option>
-                    </select>
-                </div>
+            <div class="passo">
+                <h3>Passo 2: Seleção de Especialidade</h3>
+                <select id="especialidade">
+                    <option value="" disabled selected>Selecione a especialidade</option>
+                    <option value="cardiologia">Cardiologia</option>
+                    <option value="pediatria">Pediatria</option>
+                    <option value="ortopedia">Ortopedia</option>
+                </select>
+            </div>
 
-                <div class="passo">
-                    <h3>Passo 3: Seleção de Data e horário</h3>
-                    <div class="datas">
-                        <button class="data-btn">03/03</button>
-                        <button class="data-btn">03/04</button>
-                        <button class="data-btn">03/05</button>
-                        <button class="data-btn">03/06</button>
-                        <button class="data-btn">03/07</button>
-                        <button class="data-btn">03/08</button>
-                    </div>
-                    <select id="horario">
-                        <option value="" disabled selected>Selecione o horário</option>
-                        <option value="0900">09:00</option>
-                        <option value="1000">10:00</option>
-                        <option value="1100">11:00</option>
-                    </select>
-                </div>
+            <div class="passo">
+                <h3>Passo 3: Seleção de Profissional</h3>
+                <select id="profissional">
+                    <option value="" disabled selected>Selecione o profissional</option>
+                    <option value="dr-joao">Dr. João Silva</option>
+                    <option value="dra-maria">Dra. Maria Santos</option>
+                </select>
+            </div>
 
-                <div class="passo">
-                    <h3>Passo 4: Confirmação</h3>
-                    <div class="confirmacao-info"></div>
-                    <button class="confirmar-btn">Confirmar Agendamento</button>
+            <div class="passo">
+                <h3>Passo 4: Seleção de Data e Horário</h3>
+                <div class="datas">
+                    <button class="data-btn">03/03</button>
+                    <button class="data-btn">03/04</button>
+                    <button class="data-btn">03/05</button>
+                    <button class="data-btn">03/06</button>
+                    <button class="data-btn">03/07</button>
+                    <button class="data-btn">03/08</button>
                 </div>
+                <select id="horario">
+                    <option value="" disabled selected>Selecione o horário</option>
+                    <option value="0900">09:00</option>
+                    <option value="1000">10:00</option>
+                    <option value="1100">11:00</option>
+                </select>
+            </div>
+
+            <div class="passo">
+                <h3>Passo 5: Confirmação</h3>
+                <div class="confirmacao-info"></div>
+                <button class="confirmar-btn">Confirmar Agendamento</button>
             </div>
         </div>
     </main>

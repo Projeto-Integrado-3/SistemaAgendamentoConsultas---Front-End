@@ -109,31 +109,9 @@
     </script>
 
     <script src="/scripts/header.js"></script>
+    <script src="/scripts/agenda.js"></script>
 
 </body>
 </html>
 
-    <script>
-        function handleAppointmentAction(action, appointmentId) {
-            const appointmentCard = event.target.closest('.appointment-card');
-            const statusElement = appointmentCard.querySelector('.status');
-            
-            switch(action) {
-                case 'confirmar':
-                    statusElement.textContent = 'Status: Confirmada';
-                    statusElement.className = 'status confirmada';
-                    appointmentCard.querySelector('.btn-confirmar').style.display = 'none';
-                    break;
-                case 'cancelar':
-                    statusElement.textContent = 'Status: Cancelada';
-                    statusElement.className = 'status cancelada';
-                    appointmentCard.querySelector('.action-buttons').innerHTML = `
-                        <button class="btn-visualizar" onclick="handleAppointmentAction('visualizar', '${appointmentId}')">Visualizar</button>
-                    `;
-                    break;
-                case 'editar':
-                    window.location.href = '/pages/dashboard/formAgendamento.html';
-                    break;
-            }
-        }
-    </script>
+ 

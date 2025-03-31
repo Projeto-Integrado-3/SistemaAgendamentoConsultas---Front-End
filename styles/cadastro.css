@@ -1,4 +1,3 @@
-
 .header {
   background-color: var(--primary-color);
   width: 100%;
@@ -58,12 +57,14 @@ h1 {
   padding: 10px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid #000000;
   outline: none;
   min-width: 180px;
   font-size: 1rem;
   transition: all 0.3s ease-out;
   border-radius: 0;
+  color: #000000;
+  background: transparent;
 }
 
 .label-float input:focus {
@@ -78,7 +79,7 @@ h1 {
 }
 
 .label-float label {
-  color: var(--text-color);
+  color: #000000;
   font-weight: bold;
   pointer-events: none;
   position: absolute;
