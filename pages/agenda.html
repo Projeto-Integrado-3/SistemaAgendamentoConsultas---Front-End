@@ -19,8 +19,9 @@
     </header>
     <nav>
         <ul>
-            <li><a href="/pages/dashboard/dashboard.html"><i class="fas fa-home"></i>Início</a></li>
-            <li><a href="/pages/agenda_medica.html">Consultas</a></li>
+            <li><a href="/pages/dashboard/dashboard.html"><i class="fas fa-home"></i>Início</a>
+            </li>
+             <li><a href="/pages/agenda_medica.html">Consultas</a></li>
             <li><a href="/pages/agenda.html">Agenda</a></li>
             <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
             <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
@@ -62,17 +63,48 @@
             const appointmentsDiv = document.getElementById('appointments');
             const lastAppointment = localStorage.getItem('lastAppointment');
 
+            // Fixed appointment
+            const fixedAppointment = `
+                <div class="appointment-card">
+                    <div class="appointment-info">
+                        <p>Paciente: Maria Silva</p>
+                        <p>Especialidade: Psicologia</p>
+                        <p>Profissional: Dr. Assis Antônio</p>
+                        <p>Data: 22 de abr. de 2025</p>
+                        <p>Horário: 11:30</p>
+                        <p class="status pendente">Status: Pendente</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn-confirmar" onclick="handleAppointmentAction('confirmar', 'fixed')">Confirmar</button>
+                        <button class="btn-editar" onclick="handleAppointmentAction('editar', 'fixed')">Editar</button>
+                        <button class="btn-cancelar" onclick="handleAppointmentAction('cancelar', 'fixed')">Cancelar</button>
+                    </div>
+                </div>
+            `;
+
+            let appointments = fixedAppointment;
+
             if (lastAppointment) {
                 const appointment = JSON.parse(lastAppointment);
-                appointmentsDiv.innerHTML = `
+                appointments += `
                     <div class="appointment-card">
-                        <p>Especialidade: ${appointment.especialidade}</p>
-                        <p>Profissional: ${appointment.profissional}</p>
-                        <p>Data: ${appointment.data}</p>
-                        <p>Horário: ${appointment.horario}</p>
+                        <div class="appointment-info">
+                            <p>Especialidade: ${appointment.especialidade}</p>
+                            <p>Profissional: ${appointment.profissional}</p>
+                            <p>Data: ${appointment.data}</p>
+                            <p>Horário: ${appointment.horario}</p>
+                            <p class="status pendente">Status: Pendente</p>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-confirmar" onclick="handleAppointmentAction('confirmar', 'new')">Confirmar</button>
+                            <button class="btn-editar" onclick="handleAppointmentAction('editar', 'new')">Editar</button>
+                            <button class="btn-cancelar" onclick="handleAppointmentAction('cancelar', 'new')">Cancelar</button>
+                        </div>
                     </div>
                 `;
             }
+
+            appointmentsDiv.innerHTML = appointments;
         });
     </script>
 
@@ -80,3 +112,28 @@
 
 </body>
 </html>
+
+    <script>
+        function handleAppointmentAction(action, appointmentId) {
+            const appointmentCard = event.target.closest('.appointment-card');
+            const statusElement = appointmentCard.querySelector('.status');
+            
+            switch(action) {
+                case 'confirmar':
+                    statusElement.textContent = 'Status: Confirmada';
+                    statusElement.className = 'status confirmada';
+                    appointmentCard.querySelector('.btn-confirmar').style.display = 'none';
+                    break;
+                case 'cancelar':
+                    statusElement.textContent = 'Status: Cancelada';
+                    statusElement.className = 'status cancelada';
+                    appointmentCard.querySelector('.action-buttons').innerHTML = `
+                        <button class="btn-visualizar" onclick="handleAppointmentAction('visualizar', '${appointmentId}')">Visualizar</button>
+                    `;
+                    break;
+                case 'editar':
+                    window.location.href = '/pages/dashboard/formAgendamento.html';
+                    break;
+            }
+        }
+    </script>

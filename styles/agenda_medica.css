@@ -1,46 +1,23 @@
 header {
-    
     background-color: #004D80;
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
 }
 
 header .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     padding: 8px;
-   
-}
-
-header .container a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-}
-
-header .container a img {
-    width: 300px;
 }
 
 header .logo {
     height: 65px;
-    display: block;
 }
 
-header .title {
-    color: #ffffff;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-/* Estilo do nav */
 nav {
     background-color: #004D80;
     padding: 10px 0;
@@ -55,6 +32,7 @@ nav ul {
     gap: 15px;
     flex-wrap: wrap;
     padding: 0 10px;
+    margin: 0;
 }
 
 nav ul li a {
@@ -70,7 +48,6 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Botão de logout */
 #logout-button {
     background: none;
     border: none;
@@ -86,81 +63,135 @@ nav ul li a:hover {
     background-color: #ff6b6b;
 }
 
-/* ... Div Main ... */
-
+/* Main Content Styles */
 .main-content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 20px 0;
+    padding: 2rem;
+    min-height: calc(100vh - 200px);
 }
 
 .content-area {
-    width: 80%;
     max-width: 1200px;
-    box-sizing: border-box;
+    margin: 0 auto;
 }
 
-/* ... Cor dos Botões da Div Main ... */
+.content-area h2 {
+    color: #004D80;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
 
-.content-area button {
+/* Filter Container */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-container button {
     background-color: #E6F0F8;
-    color: black; 
+    color: #004D80;
     border: 2px solid #2A5B8C;
-    padding: 10px 15px;
-    margin: 5px;
+    padding: 12px 24px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-/* ...  ... */
-
-.button-container {
-    margin-bottom: 10px;
+.filter-container button:hover {
+    background-color: #2A5B8C;
+    color: white;
 }
 
-/* ... Div's 1, 2 e 3 ... */
-
-#div1, #div2, #div3 {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+/* Appointment Cards */
+.appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-/* ...  ... */
+.appointment-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
-.content-area h3 {
+.appointment-info h3 {
     color: #2A5B8C;
-    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
-/* ...  ... */
-
-.content-area h4 {
+.appointment-info h4 {
+    color: #666;
+    margin-bottom: 0.5rem;
     font-weight: normal;
 }
 
-/* ... Cor dos Status ... */
-
-.content-area h4 {
-    font-weight: normal;
+.status {
+    font-weight: bold !important;
 }
 
-.content-area h4 strong {
-    font-weight: bold;
+.status.pendente {
+    color: #FFA500;
 }
 
-.content-area h4.pendente {
-    color: gray;
+.status.confirmada {
+    color: #4CAF50;
 }
 
-.content-area h4.confirmada {
-    color: rgb(0, 158, 0); 
+.status.cancelada {
+    color: #FF4444;
 }
 
-.content-area h4.cancelada {
-    color: red;
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.action-buttons button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-confirmar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-editar {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-cancelar {
+    background-color: #FF4444;
+    color: white;
+}
+
+.btn-visualizar {
+    background-color: #757575;
+    color: white;
+}
+
+.action-buttons button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 footer {
@@ -178,34 +209,50 @@ footer .content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    padding: 0 20px;
 }
 
 footer .content p {
     margin: 0;
-    font-size: 1.2rem;
-    padding: 0 10px;
+    font-size: 1rem;
 }
 
-/* Estilo dos ícones sociais */
 footer .social-icons {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
 }
 
 footer .social-icons a {
     color: white;
-    font-size: 24px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    border-radius: 5px;
-    padding: 5px;
+    font-size: 20px;
+    transition: color 0.3s ease;
 }
 
 footer .social-icons a:hover {
-    background-color: #091581;
-    color: #fff;
+    color: #E6F0F8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .appointment-card {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .action-buttons {
+        justify-content: center;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    footer .content {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

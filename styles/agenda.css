@@ -77,3 +77,53 @@
     border-radius: 4px;
     font-size: 14px;
 }
+
+/* Action Buttons Styles */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.action-buttons button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-confirmar {
+    background-color: #4CAF50;
+}
+
+.btn-editar {
+    background-color: #2196F3;
+}
+
+.btn-cancelar {
+    background-color: #f44336;
+}
+
+.btn-visualizar {
+    background-color: #757575;
+}
+
+.status {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.status.pendente {
+    color: #FFA500;
+}
+
+.status.confirmada {
+    color: #4CAF50;
+}
+
+.status.cancelada {
+    color: #FF4444;
+}
