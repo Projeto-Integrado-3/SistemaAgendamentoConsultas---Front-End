@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const pacienteInput = document.getElementById('paciente');
     const especialidadeSelect = document.getElementById('especialidade');
     const profissionalSelect = document.getElementById('profissional');
     const horarioSelect = document.getElementById('horario');
@@ -25,12 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateConfirmation() {
+        const paciente = pacienteInput.value;
         const especialidade = especialidadeSelect.value;
         const profissional = profissionalSelect.options[profissionalSelect.selectedIndex].text.trim();
         const horario = formatTime(horarioSelect.value);
 
-        if (especialidade && profissional && selectedDate && horario) {
+        if (paciente && especialidade && profissional && selectedDate && horario) {
             confirmacaoInfo.innerHTML = `
+                <p>Paciente: ${paciente}</p>
                 <p>Especialidade: ${especialidade}</p>
                 <p>Profissional: ${profissional}</p>
                 <p>Data: ${selectedDate}</p>
@@ -47,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Save appointment data to localStorage
         const appointmentData = {
+            paciente: pacienteInput.value,
+            idade: document.getElementById('idade').value,
             especialidade: especialidadeSelect.value,
             profissional: profissionalSelect.options[profissionalSelect.selectedIndex].text,
             data: selectedDate,

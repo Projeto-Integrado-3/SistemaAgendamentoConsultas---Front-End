@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>SaúdePrime - Bem-vindo</title>
+    <title>Exames - SaúdePrime</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/exames.css">
 </head>
-
 <body>
     <header>
         <div class="container">
-            <img src="assets/logo.png" alt="Logo SaúdePrime" class="logo">
+            <a href="/pages/dashboard/dashboard.html">
+                <img src="/assets/logo.png" alt="Logo SaúdePrime" class="logo">
+            </a>
+            <span id="username-display" class="username"></span>
         </div>
     </header>
-
+    <nav>
+        <ul>
+            <li><a href="/pages/dashboard/dashboard.html"><i class="fas fa-home"></i>Início</a></li>
+            <li><a href="/pages/agenda.html">Agenda</a></li>
+            <li><a href="/pages/dashboard/historico.html">Histórico</a></li>
+            <li><a href="/pages/pacientes/listarPacientes.html">Pacientes</a></li>
+            <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
+            <li><a href="/pages/exames.html">Exames</a></li>
+            <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
+        </ul>
+    </nav>
     <main>
-        <section class="welcome">
-            <h1>Bem-vindo ao sistema</h1>
-            <p>Gerencie sua clínica com eficiência e praticidade.</p>
-            <div class="buttons">
-                <a href="pages/login.html" class="btn">Entrar</a>
-                <a href="pages/cadastro.html" class="btn-secondary">Cadastrar</a>
+        <div class="exames-container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('pendentes')">Pendentes</button>
+                <button class="tab-btn" onclick="showTab('agendados')">Agendados</button>
+                <button class="tab-btn" onclick="showTab('concluidos')">Concluídos</button>
             </div>
-        </section>
+            <div id="pendentes" class="tab-content active">
+                <!-- Lista de exames pendentes -->
+            </div>
+            <div id="agendados" class="tab-content">
+                <!-- Lista de exames agendados -->
+            </div>
+            <div id="concluidos" class="tab-content">
+                <!-- Lista de exames concluídos -->
+            </div>
+        </div>
     </main>
-
     <footer>
         <div class="content">
             <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
         </div>
     </footer>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/exames.js"></script>
+    <script src="/scripts/logout.js"></script>
+    <script src="/scripts/header.js"></script>
 </body>
-
 </html>
