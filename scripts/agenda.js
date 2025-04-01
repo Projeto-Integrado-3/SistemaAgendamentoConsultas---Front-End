@@ -35,13 +35,14 @@ window.addEventListener('load', function () {
 });
 
 function formatDate(dateStr) {
+    if (!dateStr) return '';
+    const [day, month, year] = dateStr.split('/');
     const months = {
         '01': 'jan.', '02': 'fev.', '03': 'mar.', '04': 'abr.',
         '05': 'mai.', '06': 'jun.', '07': 'jul.', '08': 'ago.',
         '09': 'set.', '10': 'out.', '11': 'nov.', '12': 'dez.'
     };
-    const [year, month, day] = dateStr.split('-');
-    return `${day} de ${months[month]} de ${year}`;
+    return `${day} de ${months[month] || month} de ${year}`;
 }
 
 function handleAppointmentAction(action, appointmentIndex, event) {
@@ -63,13 +64,51 @@ function handleAppointmentAction(action, appointmentIndex, event) {
             `;
             break;
         case 'editar':
-           
-            window.location.href = '/pages/dashboard/formAgendamento.html';
+            const appointment = appointments[appointmentIndex];
+            appointmentCard.innerHTML = `
+                <div class="edit-form">
+                    <input type="text" id="edit-paciente" value="${appointment.paciente}" placeholder="Paciente">
+                    <input type="number" id="edit-idade" value="${appointment.idade}" placeholder="Idade">
+                    <select id="edit-especialidade">
+                        <option value="${appointment.especialidade}">${appointment.especialidade}</option>
+                        <option value="Cardiologia">Cardiologia</option>
+                        <option value="Dermatologia">Dermatologia</option>
+                        <option value="Pediatria">Pediatria</option>
+                        <option value="Psicologia">Psicologia</option>
+                    </select>
+                    <input type="text" id="edit-profissional" value="${appointment.profissional}" placeholder="Profissional">
+                    <input type="text" id="edit-data" value="${appointment.data}" placeholder="Data">
+                    <input type="text" id="edit-horario" value="${appointment.horario}" placeholder="Horário">
+                    <div class="edit-buttons">
+                        <button onclick="saveEdit(${appointmentIndex})">Salvar</button>
+                        <button onclick="cancelEdit(${appointmentIndex})">Cancelar</button>
+                    </div>
+                </div>
+            `;
             break;
     }
 
-   
     localStorage.setItem('appointments', JSON.stringify(appointments));
+}
+
+function saveEdit(index) {
+    const appointments = JSON.parse(localStorage.getItem('appointments')) ?? [];
+    
+    appointments[index] = {
+        paciente: document.getElementById('edit-paciente').value,
+        idade: document.getElementById('edit-idade').value,
+        especialidade: document.getElementById('edit-especialidade').value,
+        profissional: document.getElementById('edit-profissional').value,
+        data: document.getElementById('edit-data').value,
+        horario: document.getElementById('edit-horario').value
+    };
+
+    localStorage.setItem('appointments', JSON.stringify(appointments));
+    window.location.reload();
+}
+
+function cancelEdit(index) {
+    window.location.reload();
 }
 
 

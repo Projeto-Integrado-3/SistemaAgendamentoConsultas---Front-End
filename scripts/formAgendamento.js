@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', function () {
             dataBtns.forEach(b => b.classList.remove('selected'));
             this.classList.add('selected');
-            selectedDate = this.textContent;
+            const year = new Date().getFullYear();
+selectedDate = `${this.textContent}/${year}`;
             updateConfirmation();
         });
     });

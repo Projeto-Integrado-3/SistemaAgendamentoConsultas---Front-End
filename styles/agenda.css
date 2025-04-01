@@ -127,3 +127,39 @@
 .status.cancelada {
     color: #FF4444;
 }
+
+.edit-form {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-form input,
+.edit-form select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.edit-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.edit-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-buttons button:first-child {
+    background-color: #4CAF50;
+}
+
+.edit-buttons button:last-child {
+    background-color: #f44336;
+}
