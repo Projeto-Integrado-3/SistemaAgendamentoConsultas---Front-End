@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/exames.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
     <header>
         <div class="container">
@@ -29,33 +29,36 @@
             <li><a href="/pages/profissionalSaude/listarProfissional.html">Profissional de Saúde</a></li>
             <li><a href="/pages/exames.html">Exames</a></li>
             <li><a href="/pages/dashboard/dashboard.html">Voltar</a></li>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-                integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-                crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <li>
-                <h1 id="logado"></h1>
-            </li>
+            <li><h1 id="logado"></h1></li>
         </ul>
     </nav>
     <main>
         <div class="exames-container">
+            <h2>Gerenciamento de Exames</h2>
+            <div class="actions-bar">
+                <button class="add-exam-btn"><i class="fas fa-plus"></i> Novo Exame</button>
+                <div class="search-bar">
+                    <input type="text" id="searchExam" placeholder="Buscar exame...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
             <div class="tabs">
-                <button class="tab-btn active" onclick="showTab('pendentes')">Pendentes</button>
-                <button class="tab-btn" onclick="showTab('agendados')">Agendados</button>
-                <button class="tab-btn" onclick="showTab('concluidos')">Concluídos</button>
+                <button class="tab-btn active" onclick="showTab('pendentes')">
+                    <i class="fas fa-clock"></i> Pendentes
+                </button>
+                <button class="tab-btn" onclick="showTab('agendados')">
+                    <i class="fas fa-calendar"></i> Agendados
+                </button>
+                <button class="tab-btn" onclick="showTab('concluidos')">
+                    <i class="fas fa-check-circle"></i> Concluídos
+                </button>
             </div>
-            <div id="pendentes" class="tab-content active">
-                <!-- Lista de exames pendentes -->
-            </div>
-            <div id="agendados" class="tab-content">
-                <!-- Lista de exames agendados -->
-            </div>
-            <div id="concluidos" class="tab-content">
-                <!-- Lista de exames concluídos -->
-            </div>
+            <div id="pendentes" class="tab-content active"></div>
+            <div id="agendados" class="tab-content"></div>
+            <div id="concluidos" class="tab-content"></div>
         </div>
     </main>
-    <<footer>
+    <footer>
         <div class="content">
             <p>&copy; 2025 SaúdePrime - Todos os Direitos Reservados</p>
             <aside class="social-icons">
@@ -65,9 +68,8 @@
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </aside>
         </div>
-        </footer>
-        <script src="/scripts/exames.js"></script>
-        <script src="/scripts/logout.js"></script>
+    </footer>
+    <script src="/scripts/exames.js"></script>
+    <script src="/scripts/logout.js"></script>
 </body>
-
 </html>
