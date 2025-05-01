@@ -89,9 +89,19 @@ Este projeto está sob a licença MIT. Consulte o arquivo MIT License para mais 
 
 ![Captura de tela de 2025-05-01 17-32-42](https://github.com/user-attachments/assets/08cb0758-fb31-436e-b569-debf452edee2)
 
+* Tela de agendamentos
+
+![Captura de tela de 2025-05-01 17-59-16](https://github.com/user-attachments/assets/2169d31a-7588-4f6d-9bbf-54f568ab0f33)
+
+
 * Tela do formulário onde agenda uma consulta
 
 ![Captura de tela de 2025-05-01 17-32-54](https://github.com/user-attachments/assets/10cfb9d2-b408-46e7-8e98-7cb513dbc19f)
+
+* Tela de Histórico de Consultas
+
+![Captura de tela de 2025-05-01 17-58-30](https://github.com/user-attachments/assets/e15db59b-bc3f-40d6-b8b0-bcdc927b4c5f)
+
 
 * Tela de Cadastramento de Paciente
 
