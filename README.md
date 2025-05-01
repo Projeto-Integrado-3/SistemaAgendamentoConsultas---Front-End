@@ -73,6 +73,46 @@ Este projeto está sob a licença MIT. Consulte o arquivo MIT License para mais 
 
 ![Captura de tela de 2025-05-01 17-31-19](https://github.com/user-attachments/assets/f0aaff72-8f2e-4c24-a17c-5fc4c25d027d)
 
+* Tela de Login
+
+![Captura de tela de 2025-05-01 17-31-27](https://github.com/user-attachments/assets/316a2047-1ce5-41a5-b234-229e502a1aaf
+
+* Tela de Cadastro de Usuário
+
+![Captura de tela de 2025-05-01 17-31-32](https://github.com/user-attachments/assets/17b535f3-4d6d-44e0-af39-bddd6f41975c)
+
+* Tela Home
+
+![Captura de tela de 2025-05-01 17-32-33](https://github.com/user-attachments/assets/1fc040de-652f-4561-bc6d-4283ff7c68dc)
+
+* Tela de Consultas Médica
+
+![Captura de tela de 2025-05-01 17-32-42](https://github.com/user-attachments/assets/08cb0758-fb31-436e-b569-debf452edee2)
+
+* Tela do formulário onde agenda uma consulta
+
+![Captura de tela de 2025-05-01 17-32-54](https://github.com/user-attachments/assets/10cfb9d2-b408-46e7-8e98-7cb513dbc19f)
+
+* Tela de cadastramento de Paciente
+
+![Captura de tela de 2025-05-01 17-33-00](https://github.com/user-attachments/assets/f570022e-985b-48ad-acc2-08d3fadf52a1)
+
+* Tela de Cadastramento de Profissional
+
+![Captura de tela de 2025-05-01 17-33-03](https://github.com/user-attachments/assets/0495598e-b16d-490d-9202-e6d60be0caab)
+
+* Tela de Gerenciamento de Exames
+
+![Captura de tela de 2025-05-01 17-33-06](https://github.com/user-attachments/assets/11628846-d319-41aa-8181-08e9ecfbb3e8)
+
+
+
+
+
+
+
+
+
 
 
 
