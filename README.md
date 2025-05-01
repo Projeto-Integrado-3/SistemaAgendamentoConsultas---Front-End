@@ -75,7 +75,7 @@ Este projeto está sob a licença MIT. Consulte o arquivo MIT License para mais 
 
 * Tela de Login
 
-![Captura de tela de 2025-05-01 17-31-27](https://github.com/user-attachments/assets/316a2047-1ce5-41a5-b234-229e502a1aaf
+![Captura de tela de 2025-05-01 17-31-27](https://github.com/user-attachments/assets/316a2047-1ce5-41a5-b234-229e502a1aaf)
 
 * Tela de Cadastro de Usuário
 
