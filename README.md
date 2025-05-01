@@ -68,3 +68,6 @@ Este projeto está sob a licença MIT. Consulte o arquivo MIT License para mais 
 * Para mais informações, consulte a documentação do código ou entre em contato.
 
 
+![Captura de tela de 2025-05-01 17-31-19](https://github.com/user-attachments/assets/f0aaff72-8f2e-4c24-a17c-5fc4c25d027d)
+
+
