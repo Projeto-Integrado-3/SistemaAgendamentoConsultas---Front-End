@@ -93,13 +93,23 @@ Este projeto está sob a licença MIT. Consulte o arquivo MIT License para mais 
 
 ![Captura de tela de 2025-05-01 17-32-54](https://github.com/user-attachments/assets/10cfb9d2-b408-46e7-8e98-7cb513dbc19f)
 
-* Tela de cadastramento de Paciente
+* Tela de Cadastramento de Paciente
 
 ![Captura de tela de 2025-05-01 17-33-00](https://github.com/user-attachments/assets/f570022e-985b-48ad-acc2-08d3fadf52a1)
+
+* Formulário de Cadastramento de Paciente
+
+![Captura de tela de 2025-05-01 17-55-13](https://github.com/user-attachments/assets/3978877b-d2d5-4f7d-bbe8-1980067e24a7)
+
 
 * Tela de Cadastramento de Profissional
 
 ![Captura de tela de 2025-05-01 17-33-03](https://github.com/user-attachments/assets/0495598e-b16d-490d-9202-e6d60be0caab)
+
+* Formulário de Cadastramento de Profissional
+
+![Captura de tela de 2025-05-01 17-55-33](https://github.com/user-attachments/assets/357cdeee-6604-4ed2-9b3e-c083cc0ae373)
+
 
 * Tela de Gerenciamento de Exames
 
